@@ -8,6 +8,7 @@ import easy.{
   ReshapeTheMatrix566,
   GreatestCommonDivisor,
   PascalsTriangle118,
+  FirstUniqueCharacterInAString387,
 }
 import medium.{
   SearchA2DMatrix74,
@@ -169,5 +170,13 @@ class UnitTest extends AnyFunSuite {
   test("SearchingAlgorithms") {
     assert(SearchingAlgorithms.binarySearch(Array(1,3,5,7), 3) === true)
     assert(SearchingAlgorithms.binarySearch(Array(1,3,5,7), 13) === false)
+  }
+
+  test("FirstUniqueCharInAStr") {
+    assert(FirstUniqueCharacterInAString387.firstUniqChar("leetcode") === 0)
+    assert(FirstUniqueCharacterInAString387.firstUniqChar("loveleetcode") === 2)
+    assert(FirstUniqueCharacterInAString387.firstUniqChar("aabb") === -1)
+    assert(FirstUniqueCharacterInAString387.firstUniqChar("aabbccfft") === 8)
+    assert(FirstUniqueCharacterInAString387.firstUniqChar("aabbccfftgggwwwu") === 8)
   }
 }
