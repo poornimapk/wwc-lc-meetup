@@ -9,6 +9,7 @@ import easy.{
   GreatestCommonDivisor,
   PascalsTriangle118,
   FirstUniqueCharacterInAString387,
+  RansomNote383,
 }
 import medium.{
   SearchA2DMatrix74,
@@ -178,5 +179,13 @@ class UnitTest extends AnyFunSuite {
     assert(FirstUniqueCharacterInAString387.firstUniqChar("aabb") === -1)
     assert(FirstUniqueCharacterInAString387.firstUniqChar("aabbccfft") === 8)
     assert(FirstUniqueCharacterInAString387.firstUniqChar("aabbccfftgggwwwu") === 8)
+  }
+
+  test("RansomNote") {
+    assert(RansomNote383.canConstruct("a", "b") === false)
+    assert(RansomNote383.canConstruct("aa", "ab") === false)
+    assert(RansomNote383.canConstruct("aa", "aab") === true)
+    assert(RansomNote383.canConstruct("aab", "baa") === true)
+    assert(RansomNote383.canConstruct("bg", "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj") === true)
   }
 }
