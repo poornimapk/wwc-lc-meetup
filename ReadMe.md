@@ -10,6 +10,7 @@ Day 1(6 Problems, 5 easy, 1 medium):
 
 Day 2(7 Problems, 5 easy, 2 medium):
 7.
+
 Day 3(7 Problems, 7 easy):
 
 Day 4(8 Problems, 7 easy, 1 medium):
