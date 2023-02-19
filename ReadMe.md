@@ -9,6 +9,7 @@ Day 1(6 Problems, 5 easy, 1 medium):
 6.	https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ - easy
 
 Day 2(7 Problems, 5 easy, 2 medium):
+
 7.
 
 Day 3(7 Problems, 7 easy):
