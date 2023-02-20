@@ -16,4 +16,10 @@ class UnitTest extends AnyFunSuite {
     assert(TwoSum.twoSumBrute(Array(3, 2, 4), 6) === Array(1, 2))
     assert(TwoSum.twoSumBrute(Array(3, 3), 6) === Array(0, 1))
   }
+
+  test("TwoSumOptimized") {
+    assert(TwoSum.twoSumOptimized(Array(2, 7, 11, 15), 9) === Array(0, 1))
+    assert(TwoSum.twoSumOptimized(Array(3, 2, 4), 6) === Array(1, 2))
+    assert(TwoSum.twoSumOptimized(Array(3, 3), 6) === Array(0, 1))
+  }
 }

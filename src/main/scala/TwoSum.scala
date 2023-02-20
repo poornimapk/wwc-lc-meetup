@@ -1,3 +1,5 @@
+import scala.collection.mutable.HashMap
+
 /*
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -36,7 +38,19 @@ object TwoSum {
     myArr
   }
 
-//  def twoSumOptimized(nums: Array[Int], target: Int): Array[Int] = {
-//
-//  }
+  def twoSumOptimized(nums: Array[Int], target: Int): Array[Int] = {
+    val myMap = HashMap[Int, Int]()
+    var i = 0
+    var flag = false
+    var index1, index2 = 0
+    while(i < nums.length && !flag) {
+      if(myMap.contains(target-nums(i)) && myMap(target-nums(i)) > -1) {
+        index1 = myMap(target - nums(i))
+        index2 = i
+        flag = true
+      } else myMap(nums(i)) = i
+      i += 1
+    }
+    Array(index1, index2)
+  }
 }
