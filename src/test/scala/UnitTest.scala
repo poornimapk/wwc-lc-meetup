@@ -22,4 +22,16 @@ class UnitTest extends AnyFunSuite {
     assert(TwoSum.twoSumOptimized(Array(3, 2, 4), 6) === Array(1, 2))
     assert(TwoSum.twoSumOptimized(Array(3, 3), 6) === Array(0, 1))
   }
+
+  test("MergeSortedArray") {
+    assert(MergeSortedArray.merge(Array(1,2,3,0,0,0), 3, Array(2,5,6), 3) === Array(1,2,2,3,5,6))
+    assert(MergeSortedArray.merge(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
+    assert(MergeSortedArray.merge(Array[Int](0), 0, Array(1), 1) === Array(1))
+  }
+
+  test("MergeSortedArrayAnotherApproach") {
+    assert(MergeSortedArray.mergeAnotherApproach(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2, 3, 5, 6))
+    assert(MergeSortedArray.mergeAnotherApproach(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
+    assert(MergeSortedArray.mergeAnotherApproach(Array[Int](0), 0, Array(1), 1) === Array(1))
+  }
 }
