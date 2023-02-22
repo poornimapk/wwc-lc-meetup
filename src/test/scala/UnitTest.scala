@@ -69,4 +69,22 @@ class UnitTest extends AnyFunSuite {
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(5,4,-1,7,8)) === 23)
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-1, -2, -3, -4, -5)) === -1)
   }
+
+  test("ValidAnagram") {
+    assert(ValidAnagram242.isAnagram("anagram", "nagaram") === true)
+    assert(ValidAnagram242.isAnagram("rat", "car") === false)
+    assert(ValidAnagram242.isAnagram("brush", "shrub") === true)
+    assert(ValidAnagram242.isAnagram("angered", "enraged") === true)
+    assert(ValidAnagram242.isAnagram("hello", "world") === false)
+    assert(ValidAnagram242.isAnagram("hellos", "world") === false)
+  }
+
+  test("ValidAnagram2") {
+    assert(ValidAnagram242.isAnagram2("anagram", "nagaram") === true)
+    assert(ValidAnagram242.isAnagram2("rat", "car") === false)
+    assert(ValidAnagram242.isAnagram2("brush", "shrub") === true)
+    assert(ValidAnagram242.isAnagram2("angered", "enraged") === true)
+    assert(ValidAnagram242.isAnagram2("hello", "world") === false)
+    assert(ValidAnagram242.isAnagram2("hellos", "world") === false)
+  }
 }
