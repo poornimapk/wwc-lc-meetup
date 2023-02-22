@@ -1,5 +1,7 @@
 # WomenWhoCode Meetup – Leetcode practice
 
+UnitTesting for all Problems: [UnitTests](https://github.com/poornimapk/wwc-lc-meetup/blob/main/src/test/scala/UnitTest.scala)
+
 Day 1(6 Problems, 5 easy, 1 medium):
 1.	https://leetcode.com/problems/contains-duplicate/ - easy [Solution](https://github.com/poornimapk/wwc-lc-meetup/blob/main/src/main/scala/ContainsDuplicate217.scala)
 2.	https://leetcode.com/problems/maximum-subarray/ - medium [Solution](https://github.com/poornimapk/wwc-lc-meetup/blob/main/src/main/scala/MaximumSubarray53.scala.scala)

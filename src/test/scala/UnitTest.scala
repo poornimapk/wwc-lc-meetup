@@ -67,5 +67,6 @@ class UnitTest extends AnyFunSuite {
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-2,1,-3,4,-1,2,1,-5,4)) === 6)
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(1)) === 1)
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(5,4,-1,7,8)) === 23)
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-1, -2, -3, -4, -5)) === -1)
   }
 }
