@@ -20,7 +20,7 @@ Explanation: The arrays we are merging are [] and [1].
   The result of the merge is [1].
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.*/
 
-object MergeSortedArray {
+object MergeSortedArray88 {
   def merge(nums1: Array[Int], m: Int, nums2: Array[Int], n: Int): Array[Int] = {
     val n1 = nums1.splitAt(m)._1
 
@@ -66,6 +66,31 @@ object MergeSortedArray {
         }
         mergedArr
       }
+    }
+    for (i <- sorted.indices) nums1(i) = sorted(i)
+    nums1
+  }
+
+  def quickSort(arr: Array[Int]): Array[Int] = {
+    if(arr.length <= 1) arr
+    else {
+      val pivot = arr(arr.length/2)
+      Array.concat(
+        quickSort(arr.filter(_ < pivot)),
+        arr.filter(_ == pivot),
+        quickSort(arr.filter(_ > pivot))
+      )
+    }
+  }
+
+  def mergeSortUsingQuickSort(nums1: Array[Int], m: Int, nums2: Array[Int], n: Int): Array[Int] = {
+    val n1 = nums1.splitAt(m)._1
+
+    val sorted = (n1.isEmpty, nums2.isEmpty) match {
+      case (true, false) => nums2
+      case (false, true) => n1
+      case (true, true) => n1
+      case (false, false) => quickSort(n1 ++ nums2)
     }
     for (i <- sorted.indices) nums1(i) = sorted(i)
     nums1

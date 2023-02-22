@@ -18,7 +18,7 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 */
 
-object TwoSum {
+object TwoSum1 {
   def twoSumBrute(nums: Array[Int], target: Int): Array[Int] = {
     var myArr = Array[Int]()
     var i = 0

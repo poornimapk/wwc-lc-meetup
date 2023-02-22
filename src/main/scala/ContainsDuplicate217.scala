@@ -8,7 +8,7 @@ import scala.collection.mutable.HashMap
 //Input: nums = [1,1,1,3,3,4,3,2,4,2]
 //Output: true
 
-object ContainsDuplicate {
+object ContainsDuplicate217 {
   def containsDuplicateFn(nums: Array[Int]): Boolean = {
     var result = false
 
