@@ -14,7 +14,7 @@ Explanation: [9,4] is also accepted.*/
 
 import scala.collection.mutable.HashMap
 
-object IntersectionOf2ArraysII {
+object IntersectionOf2ArraysII350 {
   def intersect(nums1: Array[Int], nums2: Array[Int]): Array[Int] = {
     if(nums1.length < nums2.length) intersect(nums2, nums1)
     else {

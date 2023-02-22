@@ -46,8 +46,18 @@ class UnitTest extends AnyFunSuite {
   }
 
   test("IntersectionOf2ArraysII") {
-//    assert(IntersectionOf2ArraysII.intersect(Array(1,2,2,1), Array(2,2)) === Array(2, 2))
-//    assert(IntersectionOf2ArraysII.intersect(Array(4, 9, 5), Array(9,4,9,8,4)) === Array(4, 9))
-    assert(IntersectionOf2ArraysII.intersect(Array(1, 2), Array(1, 1)) === Array(1))
+    assert(IntersectionOf2ArraysII350.intersect(Array(1,2,2,1), Array(2,2)) === Array(2, 2))
+    assert(IntersectionOf2ArraysII350.intersect(Array(4, 9, 5), Array(9,4,9,8,4)) === Array(4, 9))
+    assert(IntersectionOf2ArraysII350.intersect(Array(1, 2), Array(1, 1)) === Array(1))
+  }
+
+  test("BestTimeToBuyAndSellStock121") {
+    assert(BestTimeToBuyAndSellStock121.maxProfitBruteForce(Array(7, 1, 5, 3, 6, 4)) === 5)
+    assert(BestTimeToBuyAndSellStock121.maxProfitBruteForce(Array(7, 6, 4, 3, 1)) === 0)
+  }
+
+  test("BestTimeToBuyAndSellStock121Optimized") {
+    assert(BestTimeToBuyAndSellStock121.maxProfitOptimized(Array(7, 1, 5, 3, 6, 4)) === 5)
+    assert(BestTimeToBuyAndSellStock121.maxProfitOptimized(Array(7, 6, 4, 3, 1)) === 0)
   }
 }
