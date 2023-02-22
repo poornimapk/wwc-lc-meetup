@@ -1,4 +1,5 @@
 import easy.{BestTimeToBuyAndSellStock121, ContainsDuplicate217, IntersectionOf2ArraysII350, MergeSortedArray88, TwoSum1}
+import medium.MaximumSubarray53
 import org.scalatest.funsuite._
 class UnitTest extends AnyFunSuite {
   test("ContainsDuplicateOptimized") {
@@ -60,5 +61,11 @@ class UnitTest extends AnyFunSuite {
   test("BestTimeToBuyAndSellStock121Optimized") {
     assert(BestTimeToBuyAndSellStock121.maxProfitOptimized(Array(7, 1, 5, 3, 6, 4)) === 5)
     assert(BestTimeToBuyAndSellStock121.maxProfitOptimized(Array(7, 6, 4, 3, 1)) === 0)
+  }
+
+  test("MaximumSubarray53") {
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-2,1,-3,4,-1,2,1,-5,4)) === 6)
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(1)) === 1)
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(5,4,-1,7,8)) === 23)
   }
 }
