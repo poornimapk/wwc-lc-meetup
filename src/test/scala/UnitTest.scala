@@ -1,3 +1,4 @@
+import easy.{BestTimeToBuyAndSellStock121, ContainsDuplicate217, IntersectionOf2ArraysII350, MergeSortedArray88, TwoSum1}
 import org.scalatest.funsuite._
 class UnitTest extends AnyFunSuite {
   test("ContainsDuplicateOptimized") {
