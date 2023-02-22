@@ -44,4 +44,10 @@ class UnitTest extends AnyFunSuite {
     assert(MergeSortedArray88.mergeSortUsingQuickSort(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
     assert(MergeSortedArray88.mergeSortUsingQuickSort(Array[Int](0), 0, Array(1), 1) === Array(1))
   }
+
+  test("IntersectionOf2ArraysII") {
+//    assert(IntersectionOf2ArraysII.intersect(Array(1,2,2,1), Array(2,2)) === Array(2, 2))
+//    assert(IntersectionOf2ArraysII.intersect(Array(4, 9, 5), Array(9,4,9,8,4)) === Array(4, 9))
+    assert(IntersectionOf2ArraysII.intersect(Array(1, 2), Array(1, 1)) === Array(1))
+  }
 }
