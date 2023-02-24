@@ -1,4 +1,4 @@
-import easy.{BestTimeToBuyAndSellStock121, ContainsDuplicate217, IntersectionOf2ArraysII350, MergeSortedArray88, TwoSum1}
+import easy.{BestTimeToBuyAndSellStock121, ContainsDuplicate217, IntersectionOf2ArraysII350, MergeSortedArray88, TwoSum1, ValidPalindrome125}
 import medium.MaximumSubarray53
 import org.scalatest.funsuite._
 class UnitTest extends AnyFunSuite {
@@ -86,5 +86,27 @@ class UnitTest extends AnyFunSuite {
     assert(ValidAnagram242.isAnagram2("angered", "enraged") === true)
     assert(ValidAnagram242.isAnagram2("hello", "world") === false)
     assert(ValidAnagram242.isAnagram2("hellos", "world") === false)
+  }
+
+  test("ValidPalindrome") {
+    assert(ValidPalindrome125.isPalindrome("A man, a plan, a canal: Panama") === true)
+    assert(ValidPalindrome125.isPalindrome("race a car") === false)
+    assert(ValidPalindrome125.isPalindrome(" ") === true)
+    assert(ValidPalindrome125.isPalindrome("0P") === false)
+    assert(ValidPalindrome125.isPalindrome("malayalam") === true)
+    assert(ValidPalindrome125.isPalindrome("amma") === true)
+    assert(ValidPalindrome125.isPalindrome("car") === false)
+    assert(ValidPalindrome125.isPalindrome("cars") === false)
+  }
+
+  test("ValidPalindromeOptimized") {
+    assert(ValidPalindrome125.isPalindromeOptimized("A man, a plan, a canal: Panama") === true)
+    assert(ValidPalindrome125.isPalindromeOptimized("race a car") === false)
+    assert(ValidPalindrome125.isPalindromeOptimized(" ") === true)
+    assert(ValidPalindrome125.isPalindromeOptimized("0P") === false)
+    assert(ValidPalindrome125.isPalindromeOptimized("malayalam") === true)
+    assert(ValidPalindrome125.isPalindromeOptimized("amma") === true)
+    assert(ValidPalindrome125.isPalindromeOptimized("car") === false)
+    assert(ValidPalindrome125.isPalindromeOptimized("cars") === false)
   }
 }
