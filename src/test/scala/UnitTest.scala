@@ -1,20 +1,32 @@
-import easy.{BestTimeToBuyAndSellStock121, ContainsDuplicate217, IntersectionOf2ArraysII350, MergeSortedArray88, TwoSum1, ValidPalindrome125}
+import easy.{
+  BestTimeToBuyAndSellStock121,
+  ContainsDuplicate217,
+  IntersectionOf2ArraysII350,
+  MergeSortedArray88,
+  TwoSum1,
+  ValidPalindrome125,
+  //ReshapeTheMatrix566
+  GreatestCommonDivisor
+}
 import medium.MaximumSubarray53
 import org.scalatest.funsuite._
 class UnitTest extends AnyFunSuite {
   test("ContainsDuplicateOptimized") {
     assert(ContainsDuplicate217.containsDuplicateFnOptimized(Array(1, 2, 3, 1)) === true)
     assert(ContainsDuplicate217.containsDuplicateFnOptimized(Array(1, 2, 3, 4)) === false)
-    assert(ContainsDuplicate217.containsDuplicateFnOptimized(Array(1, 1, 1, 3, 3, 4, 3, 2, 4, 2)) === true)
+    assert(
+      ContainsDuplicate217
+        .containsDuplicateFnOptimized(Array(1, 1, 1, 3, 3, 4, 3, 2, 4, 2)) === true)
   }
   test("ContainsDuplicateFromLC") {
     assert(ContainsDuplicate217.containsDuplicateFromLC(Array(1, 2, 3, 1)) === true)
     assert(ContainsDuplicate217.containsDuplicateFromLC(Array(1, 2, 3, 4)) === false)
-    assert(ContainsDuplicate217.containsDuplicateFromLC(Array(1, 1, 1, 3, 3, 4, 3, 2, 4, 2)) === true)
+    assert(
+      ContainsDuplicate217.containsDuplicateFromLC(Array(1, 1, 1, 3, 3, 4, 3, 2, 4, 2)) === true)
   }
 
   test("TwoSumBruteForce") {
-    assert(TwoSum1.twoSumBrute(Array(2,7,11,15), 9) === Array(0, 1))
+    assert(TwoSum1.twoSumBrute(Array(2, 7, 11, 15), 9) === Array(0, 1))
     assert(TwoSum1.twoSumBrute(Array(3, 2, 4), 6) === Array(1, 2))
     assert(TwoSum1.twoSumBrute(Array(3, 3), 6) === Array(0, 1))
   }
@@ -26,14 +38,20 @@ class UnitTest extends AnyFunSuite {
   }
 
   test("MergeSortedArray") {
-    assert(MergeSortedArray88.merge(Array(1,2,3,0,0,0), 3, Array(2,5,6), 3) === Array(1,2,2,3,5,6))
+    assert(
+      MergeSortedArray88.merge(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2, 3,
+        5, 6))
     assert(MergeSortedArray88.merge(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
     assert(MergeSortedArray88.merge(Array[Int](0), 0, Array(1), 1) === Array(1))
   }
 
   test("MergeSortedArrayAnotherApproach") {
-    assert(MergeSortedArray88.mergeAnotherApproach(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2, 3, 5, 6))
-    assert(MergeSortedArray88.mergeAnotherApproach(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
+    assert(
+      MergeSortedArray88
+        .mergeAnotherApproach(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2, 3,
+        5, 6))
+    assert(
+      MergeSortedArray88.mergeAnotherApproach(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
     assert(MergeSortedArray88.mergeAnotherApproach(Array[Int](0), 0, Array(1), 1) === Array(1))
   }
 
@@ -42,14 +60,19 @@ class UnitTest extends AnyFunSuite {
   }
 
   test("MergeSortedUsingQuickSort") {
-    assert(MergeSortedArray88.mergeSortUsingQuickSort(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2, 3, 5, 6))
-    assert(MergeSortedArray88.mergeSortUsingQuickSort(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
+    assert(
+      MergeSortedArray88
+        .mergeSortUsingQuickSort(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3) === Array(1, 2, 2,
+        3, 5, 6))
+    assert(
+      MergeSortedArray88.mergeSortUsingQuickSort(Array(1), 1, Array.emptyIntArray, 0) === Array(1))
     assert(MergeSortedArray88.mergeSortUsingQuickSort(Array[Int](0), 0, Array(1), 1) === Array(1))
   }
 
   test("IntersectionOf2ArraysII") {
-    assert(IntersectionOf2ArraysII350.intersect(Array(1,2,2,1), Array(2,2)) === Array(2, 2))
-    assert(IntersectionOf2ArraysII350.intersect(Array(4, 9, 5), Array(9,4,9,8,4)) === Array(4, 9))
+    assert(IntersectionOf2ArraysII350.intersect(Array(1, 2, 2, 1), Array(2, 2)) === Array(2, 2))
+    assert(
+      IntersectionOf2ArraysII350.intersect(Array(4, 9, 5), Array(9, 4, 9, 8, 4)) === Array(4, 9))
     assert(IntersectionOf2ArraysII350.intersect(Array(1, 2), Array(1, 1)) === Array(1))
   }
 
@@ -64,9 +87,9 @@ class UnitTest extends AnyFunSuite {
   }
 
   test("MaximumSubarray53") {
-    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-2,1,-3,4,-1,2,1,-5,4)) === 6)
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-2, 1, -3, 4, -1, 2, 1, -5, 4)) === 6)
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(1)) === 1)
-    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(5,4,-1,7,8)) === 23)
+    assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(5, 4, -1, 7, 8)) === 23)
     assert(MaximumSubarray53.maxSubArrayKadanesAlgo(Array(-1, -2, -3, -4, -5)) === -1)
   }
 
@@ -109,4 +132,10 @@ class UnitTest extends AnyFunSuite {
     assert(ValidPalindrome125.isPalindromeOptimized("car") === false)
     assert(ValidPalindrome125.isPalindromeOptimized("cars") === false)
   }
+
+  /*test("ReshapeTheMatrix") {
+    assert(
+      ReshapeTheMatrix566
+        .matrixReshape(Array(Array(1, 2), Array(3, 4)), 1, 4) === Array(1, 2, 3, 4))
+  }*/
 }
