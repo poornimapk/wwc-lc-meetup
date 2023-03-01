@@ -18,16 +18,17 @@ package easy
 
 object ReshapeTheMatrix566 {
   def matrixReshape(mat: Array[Array[Int]], r: Int, c: Int): Array[Array[Int]] = {
-    if((r * c) != (mat.length * mat(0).length)) return mat
-
-    val flattenedMat = mat.flatten
-    val res = Array.ofDim[Int](r, c)
-    var index = 0
-    for(i <- 0 until r)
-      for(j <- 0 until c) {
-        res(i)(j) = flattenedMat(index)
-        index += 1
-      }
+    var res = Array.ofDim[Int](r, c)
+    if((r * c) != (mat.length * mat(0).length)) res = mat
+    else {
+      val flattenedMat = mat.flatten
+      var index = 0
+      for (i <- 0 until r)
+        for (j <- 0 until c) {
+          res(i)(j) = flattenedMat(index)
+          index += 1
+        }
+    }
     res
   }
 }
