@@ -13,7 +13,7 @@ object GreatestCommonDivisor extends App {
   private def divisors(num: Int): Array[Option[Int]] =
     (1 to num).collect(i => if (num % i == 0) Some(i) else None).toArray
 
-  def findGreatestCommonDenominator: Int = {
+  def findGreatestCommonDenominatorRandom: Int = {
     val sortedReversedRandomNums = generateRandomInts.sorted.reverse
     val num1 = sortedReversedRandomNums(0)
     val num2 = sortedReversedRandomNums(1)
@@ -23,5 +23,13 @@ object GreatestCommonDivisor extends App {
     num1Divisors.intersect(num2Divisors).sorted.reverse(0)
   }
 
-  println(findGreatestCommonDenominator)
+  println(findGreatestCommonDenominatorRandom)
+
+  def findGreatestCommonDenominator(x: Int, y: Int): Int = {
+    val xDivisors = divisors(x).sorted.flatten
+    val yDivisors = divisors(y).sorted.flatten
+    xDivisors.intersect(yDivisors).sorted.reverse(0)
+  }
+
+  println(findGreatestCommonDenominator(54, 24))
 }

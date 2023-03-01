@@ -138,4 +138,9 @@ class UnitTest extends AnyFunSuite {
       ReshapeTheMatrix566
         .matrixReshape(Array(Array(1, 2), Array(3, 4)), 1, 4) === Array(1, 2, 3, 4))
   }*/
+
+  test("GreatestCommonDivisor" ) {
+    assert(GreatestCommonDivisor.findGreatestCommonDenominator(54, 24) === 6)
+    assert(GreatestCommonDivisor.findGreatestCommonDenominator(8, 12) === 4)
+  }
 }
