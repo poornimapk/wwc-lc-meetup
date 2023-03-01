@@ -16,15 +16,23 @@ Output: [[1,2],[3,4]]
 
 package easy
 
-/*object ReshapeTheMatrix566 {
+object ReshapeTheMatrix566 {
   def matrixReshape(mat: Array[Array[Int]], r: Int, c: Int): Array[Array[Int]] = {
-    val totalMatLen = mat.flatten.length
-    val totalOutputMatLen = r * c
+    if((r * c) != (mat.length * mat(0).length)) return mat
 
+    val flattenedMat = mat.flatten
+    val res = Array.ofDim[Int](r, c)
+    var index = 0
+    for(i <- 0 until r)
+      for(j <- 0 until c) {
+        res(i)(j) = flattenedMat(index)
+        index += 1
+      }
+    res
   }
-}*/
+}
 
-object ForComprehension extends App {
+/*object ForComprehension extends App {
   val totalResults = List(TestResults("1", 5, 5), TestResults("2", 6, 6))
   val listOfSuccessfulResultsCount: List[Int] =
     for {
@@ -38,4 +46,4 @@ object ForComprehension extends App {
 
 case class TestResults(id: String, successfulTests: Int, totalTests: Int) {
   def succeeded = successfulTests == totalTests
-}
+}*/

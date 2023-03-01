@@ -5,7 +5,7 @@ import easy.{
   MergeSortedArray88,
   TwoSum1,
   ValidPalindrome125,
-  //ReshapeTheMatrix566
+  ReshapeTheMatrix566,
   GreatestCommonDivisor
 }
 import medium.MaximumSubarray53
@@ -133,11 +133,14 @@ class UnitTest extends AnyFunSuite {
     assert(ValidPalindrome125.isPalindromeOptimized("cars") === false)
   }
 
-  /*test("ReshapeTheMatrix") {
+  test("ReshapeTheMatrix") {
     assert(
       ReshapeTheMatrix566
-        .matrixReshape(Array(Array(1, 2), Array(3, 4)), 1, 4) === Array(1, 2, 3, 4))
-  }*/
+        .matrixReshape(Array(Array(1, 2), Array(3, 4)), 1, 4) === Array(Array(1, 2, 3, 4)))
+    assert(ReshapeTheMatrix566
+      .matrixReshape(Array(Array(1, 2), Array(3, 4)), 2, 4) === Array(Array(1, 2), Array(3, 4)))
+
+  }
 
   test("GreatestCommonDivisor" ) {
     assert(GreatestCommonDivisor.findGreatestCommonDenominator(54, 24) === 6)
