@@ -6,7 +6,8 @@ import easy.{
   TwoSum1,
   ValidPalindrome125,
   ReshapeTheMatrix566,
-  GreatestCommonDivisor
+  GreatestCommonDivisor,
+  PascalsTriangle118,
 }
 import medium.MaximumSubarray53
 import org.scalatest.funsuite._
@@ -145,5 +146,10 @@ class UnitTest extends AnyFunSuite {
   test("GreatestCommonDivisor" ) {
     assert(GreatestCommonDivisor.findGreatestCommonDenominator(54, 24) === 6)
     assert(GreatestCommonDivisor.findGreatestCommonDenominator(8, 12) === 4)
+  }
+
+  test("PascalsTriangle") {
+    assert(PascalsTriangle118.generate(5) === List(List(1), List(1, 1), List(1, 2, 1), List(1, 3, 3, 1), List(1, 4, 6, 4, 1)))
+    assert(PascalsTriangle118.generate(1) === List(List(1)))
   }
 }
