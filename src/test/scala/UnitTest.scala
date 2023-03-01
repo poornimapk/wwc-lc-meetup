@@ -9,7 +9,15 @@ import easy.{
   GreatestCommonDivisor,
   PascalsTriangle118,
 }
-import medium.MaximumSubarray53
+import medium.{
+  SearchA2DMatrix74,
+  MaximumSubarray53,
+}
+import utils.{
+  SearchingAlgorithms,
+  SortingAlgorithms,
+}
+
 import org.scalatest.funsuite._
 class UnitTest extends AnyFunSuite {
   test("ContainsDuplicateOptimized") {
@@ -151,5 +159,15 @@ class UnitTest extends AnyFunSuite {
   test("PascalsTriangle") {
     assert(PascalsTriangle118.generate(5) === List(List(1), List(1, 1), List(1, 2, 1), List(1, 3, 3, 1), List(1, 4, 6, 4, 1)))
     assert(PascalsTriangle118.generate(1) === List(List(1)))
+  }
+
+  test("Search2DMatrix") {
+    assert(SearchA2DMatrix74.searchMatrix(Array(Array(1,3,5,7), Array(10,11,16,20), Array(23,30,34,60)), 3) === true)
+    assert(SearchA2DMatrix74.searchMatrix(Array(Array(1,3,5,7), Array(10,11,16,20), Array(23,30,34,60)), 13) === false)
+  }
+
+  test("SearchingAlgorithms") {
+    assert(SearchingAlgorithms.binarySearch(Array(1,3,5,7), 3) === true)
+    assert(SearchingAlgorithms.binarySearch(Array(1,3,5,7), 13) === false)
   }
 }
